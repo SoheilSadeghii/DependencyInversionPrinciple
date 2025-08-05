@@ -20,4 +20,22 @@ namespace DependencyInversionPrinciple
             // To Do: Send Message
         }
     }
+
+    public class DatabaseManager
+    {
+        public void Add()
+        {
+
+        }
+
+        public void Remove()
+        {
+
+        }
+
+        public void Update()
+        {
+
+        }
+    }
 }
