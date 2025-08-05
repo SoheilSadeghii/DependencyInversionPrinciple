@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace DependencyInversionPrinciple
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+        }
+    }
+
+    public class EmailNotification
+    {
+        public void Send(string message)
+        {
+            // To Do: Send Message
         }
     }
 }
