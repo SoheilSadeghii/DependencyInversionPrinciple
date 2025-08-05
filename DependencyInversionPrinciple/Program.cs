@@ -23,6 +23,12 @@ namespace DependencyInversionPrinciple
 
     public class DatabaseManager
     {
+        private EmailNotification notification;
+
+        public DatabaseManager()
+        {
+            notification = new EmailNotification();
+        }
         public void Add()
         {
 
