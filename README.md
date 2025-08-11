@@ -30,31 +30,18 @@ In this project:
 
 Example from the code:
 ```csharp
-public interface IMessageService
+public class DatabaseManager
 {
-    void SendMessage(string message);
-}
+    private INotification notification;
 
-public class EmailService : IMessageService
-{
-    public void SendMessage(string message)
+    public DatabaseManager(INotification notification)
     {
-        Console.WriteLine("Email sent: " + message);
-    }
-}
-
-public class Notification
-{
-    private readonly IMessageService _messageService;
-
-    public Notification(IMessageService messageService)
-    {
-        _messageService = messageService;
+        this.notification = notification;
     }
 
-    public void Send(string text)
+    public void Add()
     {
-        _messageService.SendMessage(text);
+        notification.Send("Add new record.");
     }
 }
 ```
